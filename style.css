@@ -4,21 +4,26 @@
 }
 
 body {
-  background-color: #293251;
+  cursor: pointer;
+  margin: 0;
 }
 
 .container {
-  width: 1200px;
-  height: 800px;
   background-image: url("images/01d.png");
-  margin: auto;
+  background-position: center;
+  background-size: cover; /* 배경 크기만큼 이미지가 꽉 채워진다. */
+  position: fixed; /* 이미지의 위치를 고정시킨다*/
+  width: 100%; /* 넓이를 100%로 늘린다.*/
+  height: 100%; /* 높이를 100%로 늘린다.*/
 }
 
 .app-title {
+  text-shadow: 1px 2px 4px grey;
   text-align: center;
-  padding: 15px;
-  font-size: 30px;
+  padding: 0px;
+  font-size: 60px;
   color: white;
+  margin-bottom: 0px;
 }
 
 .notification {
@@ -36,27 +41,30 @@ body {
 
 .temperature p {
   color: white;
-  font-size: 45px;
+  font-size: 55px;
   text-align: right;
-  margin-right: 30px;
+  margin-right: 15px;
 }
 
 .weather-description p {
   color: white;
-  font-size: 45px;
+  font-size: 40px;
   text-align: right;
   margin-right: 30px;
+  margin-top: 0px;
+  margin-bottom: 5px;
 }
 
 .weather-say p {
   color: white;
-  font-size: 45px;
+  font-size: 40px;
   text-align: right;
   margin-right: 30px;
+  margin-top: 0px;
 }
 
 .city-search {
-  margin-left: 60px;
+  margin-left: 25vmin;
   color: white;
   font-size: 30px;
 }
@@ -65,33 +73,49 @@ body {
   margin-bottom: 0px;
 }
 
+button {
+  transition: all 0.3s linear;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+button:hover {
+  color: pink;
+  font-size: 15px;
+  font-weight: bold;
+}
+
 /* forecast */
 .forecastTempContainer {
   width: 100px;
-  height: 150px;
-  background-color: whitesmoke;
+  height: 100px;
+  justify-content: space-between;
 }
 
 .forecastList {
   display: flex;
   flex-direction: row;
-  margin-left: auto;
+  margin-left: 13vmin;
+  list-style: none;
 }
 
 li {
   margin-left: 20px;
-  list-style: none;
 }
 
 .day {
+  color: white;
   padding-top: 20px;
   text-align: center;
 }
 
 .img {
-  width: 60px;
+  display: block;
+  margin: auto;
+  width: 50px;
 }
 
 .forecastTemperature {
+  color: white;
   text-align: center;
 }

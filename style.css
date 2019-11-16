@@ -1,100 +1,97 @@
-*{
-    font-family : "BMHANNA_11yrs";
-    box-sizing : border-box;
+* {
+  font-family: "BMHANNA_11yrs";
+  box-sizing: border-box;
 }
 
-body{
-    background-color: #293251;
+body {
+  background-color: #293251;
 }
 
-.container{
-    width : 1200px;
-    height : 800px;
-    background-image:url("images/01d.png");
-    margin : auto;
+.container {
+  width: 1200px;
+  height: 800px;
+  background-image: url("images/01d.png");
+  margin: auto;
 }
 
-.app-title{
-    text-align : center;
-    padding : 15px;
-    font-size : 30px;
-    color : white;
+.app-title {
+  text-align: center;
+  padding: 15px;
+  font-size: 30px;
+  color: white;
 }
 
-.notification{
-    background-color: #f8d7da;
-    display: none;
+.notification {
+  background-color: #f8d7da;
+  display: none;
 }
 
-
-.notification p{
-    color: #721c24;
-    font-size: 1.2em;
-    margin: 0;
-    text-align: center;
-    padding: 10px 0;
+.notification p {
+  color: #721c24;
+  font-size: 1.2em;
+  margin: 0;
+  text-align: center;
+  padding: 10px 0;
 }
 
-.temperature p{
-    color : white;
-    font-size : 45px;
-    text-align : right;
-    margin-right : 30px;
+.temperature p {
+  color: white;
+  font-size: 45px;
+  text-align: right;
+  margin-right: 30px;
 }
 
-.weather-description p{
-    color : white;
-    font-size : 45px;
-    text-align : right;
-    margin-right : 30px;
+.weather-description p {
+  color: white;
+  font-size: 45px;
+  text-align: right;
+  margin-right: 30px;
 }
 
-.weather-say p{
-    color : white;
-    font-size : 45px;
-    text-align : right;
-    margin-right : 30px;
+.weather-say p {
+  color: white;
+  font-size: 45px;
+  text-align: right;
+  margin-right: 30px;
 }
 
-.city-search{
-    margin-left : 30px;
-    color : white;
-    font-size : 30px;
+.city-search {
+  margin-left: 60px;
+  color: white;
+  font-size: 30px;
 }
 
-.city-search p{
-    margin-bottom : 0px;
+.city-search p {
+  margin-bottom: 0px;
 }
-
 
 /* forecast */
-.forecastTempContainer{
-    width : 100px;
-    height : 200px;
-    background-color : whitesmoke;
+.forecastTempContainer {
+  width: 100px;
+  height: 150px;
+  background-color: whitesmoke;
 }
 
-.forecastList{
-    display : flex;
-    flex-direction : row;
-    margin-left : auto;
+.forecastList {
+  display: flex;
+  flex-direction: row;
+  margin-left: auto;
 }
 
 li {
-    margin-left : 20px;
-    list-style : none;
+  margin-left: 20px;
+  list-style: none;
 }
 
-
-.day{
-    padding-top : 20px;
-    text-align : center;
+.day {
+  padding-top: 20px;
+  text-align: center;
 }
 
-.img{
-    width : 100px;
+.img {
+  width: 60px;
 }
 
 .forecastTemperature {
-    text-align : center;
+  text-align: center;
 }

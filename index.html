@@ -1,70 +1,68 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset = "UTF-8">
-        <title>Weather App</title>
-        <link rel = "stylesheet" href = "style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css" />
 
-        <!-- 폰트 불러오기 -->
-        <link rel = "stylesheet" href = "font/BMHANNA_11yrs_ttf.css">
-    </head>
+    <!-- 폰트 불러오기 -->
+    <link rel="stylesheet" href="font/BMHANNA_11yrs_ttf.css" />
+  </head>
 
+  <body>
+    <div class="container">
+      <div class="app-title">
+        <p>오늘의 날씨</p>
+      </div>
+      <div class="notification"></div>
+      <div class="temperature">
+        <p>-도씨</p>
+      </div>
+      <div class="weather-description">
+        <p>오늘 날씨는 어떨까</p>
+      </div>
+      <div class="weather-say">
+        <p>한 번 알아보자</p>
+      </div>
 
-
-    <body>
-        <div class = "container">
-            <div class = "app-title">
-                <p>오늘의 날씨</p>
-            </div>
-            <div class = "notification"></div>
-            <div class = "temperature">
-                <p>-도씨</p>
-            </div>
-            <div class = "weather-description">
-                <p>오늘 날씨는 어떨까</p>
-            </div>
-            <div class = "weather-say">
-                <p>한 번 알아보자</p>
-            </div>
-
-
-
-            <!-- autocomplete -->
-            <form id = "city-form">
-                <div class = "city-search">
-                    <p>다른 도시 날씨는?</p>
-                    <div>
-                        <input type="text" id="autocomplete" placeholder = "도시 입력">
-                        <button>Submit</button>
-                    </div>
-               </div>
-            </form>
-                
-            <!-- 3일 예측치 만들어서 붙이기 -->
-            <!-- TEMPLATE -->
-            <template id = "forecastTemp">
-                <div class = "forecastTempContainer"> 
-                    <p class = "day"></p>
-                    <img class = "img" src = ""/>
-                    <p class = "forecastTemperature"></p>
-                </div>
-            </template>
-
-            <!-- 붙일곳 -->
-            <div class = "forecastContainer">
-                <ul class = "forecastList">
-                    <!--리스트 생성해서 붙이기-->
-                </ul>
-            </div>
-
+      <!-- autocomplete -->
+      <form id="city-form">
+        <div class="city-search">
+          <p>다른 도시 날씨는?</p>
+          <div>
+            <input type="text" id="autocomplete" placeholder="도시 입력" />
+            <button>검색</button>
+          </div>
         </div>
+      </form>
 
-        <!-- 구글 map api -->
-        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAp70yDaucoqsbhhpC9f4lWYDPYPKqslVU&libraries=places"></script>
-        
-        <script src = "config.js"></script>
-        <script src = "data.js"></script>
-        <script src = "now.js"></script>
-        <script src = "forecast.js"></script>
-    </body>
+      <!-- 1일 3시간마다 예측치 만들어서 붙이기 -->
+      <!-- TEMPLATE -->
+      <template id="forecastTemp">
+        <div class="forecastTempContainer">
+          <p class="day"></p>
+          <img class="img" src="" />
+          <p class="forecastTemperature"></p>
+        </div>
+      </template>
+
+      <!-- 붙일곳 -->
+      <div class="forecastContainer">
+        <ul class="forecastList">
+          <!--리스트 생성해서 붙이기-->
+        </ul>
+      </div>
+    </div>
+
+    <!-- 구글 map api -->
+    <script
+      type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAp70yDaucoqsbhhpC9f4lWYDPYPKqslVU&libraries=places"
+    ></script>
+
+    <script src="config.js"></script>
+    <script src="data.js"></script>
+    <script src="now.js"></script>
+    <script src="forecast.js"></script>
+  </body>
 </html>

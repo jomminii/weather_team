@@ -1,0 +1,6 @@
+@font-face {
+    /* 폰트명 지정 */
+    font-family : "BMHANNA_11yrs";
+    /* 폰트 소스 불러오기 */
+    src: url("BMHANNA_11yrs_ttf.ttf") format("truetype")
+}

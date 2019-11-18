@@ -14,7 +14,7 @@ const forecastContainer = document.querySelector(".forecastContainer");
 const forecastList = document.querySelector(".forecastList");
 
 // get forecast information
-const forecast = { 0: {}, 1: {}, 2: {}, 3: {}, 4: {}, 5: {}, 6: {}, 7: {} }; // forecast 정보를 담을 객체
+let forecast = []; // forecast 정보를 담을 배열
 
 function getForecast(latitude, longitude) {
   let api = `https://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&appid=${key}`;
@@ -25,17 +25,22 @@ function getForecast(latitude, longitude) {
       return data;
     })
     .then(function(data) {
+      forecast = []; // 예측치 뽑아올때마다 초기화 해줘야 배열이 누적이 안됨
       for (let i = 0; i < 8; i++) {
         // 8 시간대의 정보를 담음
-        forecast[i].temperature = Math.floor(data.list[i].main.temp - KELVIN);
-        forecast[i].description = data.list[i].weather[0].description;
-        forecast[i].iconId = data.list[i].weather[0].icon;
-        forecast[i].city = data.city.name;
-        forecast[i].country = data.city.country;
+        let forecastElement = {}; 
+        forecastElement.temperature = Math.floor(data.list[i].main.temp - KELVIN);
+        forecastElement.description = data.list[i].weather[0].description;
+        forecastElement.iconId = data.list[i].weather[0].icon;
+        forecastElement.city = data.city.name;
+        forecastElement.country = data.city.country;
 
         var date = new Date(data.list[i].dt * 1000); // 1000을 곱해 초단위로 만들어줌
-        forecast[i].day = day[date.getDay()];
-        forecast[i].time = date.getHours();
+        forecastElement.day = day[date.getDay()];
+        forecastElement.time = date.getHours();
+        console.log(forecastElement);
+        forecast.push(forecastElement);
+        console.log(forecast);
       }
     })
     .then(function() {
